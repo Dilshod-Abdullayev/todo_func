@@ -10,6 +10,20 @@
   justify-content: space-around;
   align-items: center;
   font-size: 2rem;
+  border: 1px solid black;
+}
+.menu__nav {
+  display: flex;
+}
+.hidden {
+  width: 5px;
+}
+.nav__item {
+  width: 80%;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-around;
 }
 .theme-white {
   background-color: white;
@@ -56,4 +70,20 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+}
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  padding: 20px;
+  border-right: 1px solid black;
+  transition: width 0.3s ease;
+}
+
+.hidden {
+  width: 5px;
+  transition: 0.3s ease;
 }

@@ -7,7 +7,7 @@ export default function Users() {
 
     return (
         <div className="users-container">
-            <table border='10' className="users-table">
+            <table className="users-table">
                 <thead>
                     <tr>
                         <th>ID</th>

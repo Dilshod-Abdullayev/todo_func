@@ -1,11 +1,13 @@
 import React from 'react'
-import Main from './components/Main'
 import './App.css'
+import { useSelector, useDispatch } from "react-redux";
+import MainRouter from './Routes/MainRouter'
 export default function App() {
+  const themeReducer = useSelector((state) => state.themeReducer);
+  const theme = themeReducer.theme;
   return (
-    <div>
-      <Main/>
-      <h1>Hello world</h1>
+    <div className={`theme-${theme}`}>
+      <MainRouter />
     </div>
   )
 }

@@ -1,18 +1,15 @@
 import React from 'react'
-import SearchPanel from './SearchPanel'
 import Settings from './Settings'
 import SizePage from './SizePage'
 import '../../styles/style.css'
 import Menu from './Menu'
 export default function Nav() {
-
   return (
     <div className='nav'>
       <div className='menu__nav'>
-       <Menu/> 
+        <Menu />
       </div>
       <div className='nav__item'>
-        <SearchPanel />
         <Settings />
         <SizePage />
       </div>

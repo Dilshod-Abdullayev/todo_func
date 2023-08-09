@@ -3,7 +3,6 @@ import '../styles/style.css';
 import { Input, Space, message } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
 import { dataAction } from '../redux/action/dataAction';
-import Users from './Users';
 const { Search } = Input;
 const info = () => {
     message.info('Xabar muafaqqiyatli qoshildi');
@@ -32,9 +31,12 @@ export default function CreatePage() {
                     size='large'
                     onSearch={onSearch}
                 />
-                ``
             </Space>
-            <Users/>
+            {
+                arr.map((item) => (
+                    <h1 key={item.id}> <span>{item.id}</span> {item.name}</h1>
+                ))
+            }
         </div>
     );
 }

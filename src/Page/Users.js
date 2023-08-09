@@ -1,16 +1,29 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import '../styles/style.css';
 
 export default function Users() {
     const arr = useSelector((state) => state.dataReducer);
-    console.log(arr);
+
     return (
-        <div>
-            {
-                arr.map((item) => (
-                    <h1 key={item.id}> <span>{item.id}</span> {item.name}</h1>
-                ))
-            }
+        <div className="users-container">
+            <table border='10' className="users-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {arr.map((item) => (
+                        <tr key={item.id}>
+                            <td>{item.id}</td>
+                            <td>{item.name}</td>
+                        </tr>
+                    ))}
+
+                </tbody>
+            </table>
         </div>
     );
 }
